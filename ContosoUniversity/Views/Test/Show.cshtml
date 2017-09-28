@@ -1,0 +1,22 @@
+﻿@*
+	* Nhóm: Huỳnh Ngọc Thanh Xuân - Trịnh Văn Công
+*@
+
+@model List<string>
+@{
+	ViewBag.Title = "Show";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<center>
+	<h2>Danh sách các database trong server này</h2>
+</center>
+<ul>
+	@foreach (var item in Model)
+	{
+		<li>
+			@*<a href="/test/detail/@item" name="">@item</a>*@
+			@*Tạo một thẻ razor để dẫn link tới action detail với routeValues được lấy từ đối tượng ViewBag mà ta đã gán ở controller*@
+			@Html.ActionLink(item, "detail", new { @ip = ViewBag.ip, @usr = ViewBag.usr, @pwd = ViewBag.pwd, @dbName = item.ToString() })
+		</li>
+	}
+</ul>

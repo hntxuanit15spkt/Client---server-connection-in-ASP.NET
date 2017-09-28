@@ -1,0 +1,22 @@
+﻿@*
+	* Nhóm: Huỳnh Ngọc Thanh Xuân - Trịnh Văn Công
+*@
+
+@model List<string>
+@{
+	ViewBag.Title = "detail";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<center>
+	<h2>Danh sách các table trong database được phân quyền db_datareader trong User Mapping</h2>
+</center>
+<ul>
+	@foreach (var item in Model)
+	{
+		<li>
+			<a href="/test/detail/@item" name="">@item</a>
+			@*@Html.ActionLink(item, "detail", new { @ip = ViewBag.ip, @usr = ViewBag.usr, @pwd = ViewBag.pwd, @dbName = item.ToString() })*@
+		</li>
+	}
+</ul>
+
