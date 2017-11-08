@@ -1,19 +1,8 @@
-﻿
-@*
-	* Nhóm: Huỳnh Ngọc Thanh Xuân - Trịnh Văn Công
-*@
-
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-@*Tạo form lấy dữ liệu từ máy server bao gồm địa chỉ ip, username và password*@
+﻿<h2>Index</h2>
 <h2>Thông tin máy server</h2>
-<form action="/test/show"  method="post">
-	IP Address: <input type="text" name="ip" /><br />
-	Username: <input type="text" name="usr"  /><br />
-	Password: <input type="text" name="pwd"  /><br />
-	<button>Show</button>
+<form action="/test/show" method="post">
+  IP Address: <input type="text" name="ip" /><br />
+  Username: <input type="text" name="usr" /><br />
+  Password: <input type="text" name="pwd" /><br />
+  <button>Show</button>
 </form>
-
